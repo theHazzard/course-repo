@@ -7,5 +7,6 @@ describe("fizzbuzz", () => {
 
   it("returns the same number as a string", () => {
     expect(fizzBuzz(1)).toBe("1");
+    expect(fizzBuzz(2)).toBe("2");
   });
 });
