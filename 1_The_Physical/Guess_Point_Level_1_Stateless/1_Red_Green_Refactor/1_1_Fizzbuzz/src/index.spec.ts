@@ -28,4 +28,8 @@ describe("fizzbuzz", () => {
   it("rejects numbers lower than 1", () => {
     expect(() => fizzBuzz(-1)).toThrow();
   });
+
+  it("rejects numbers higher than 100", () => {
+    expect(() => fizzBuzz(101)).toThrow();
+  });
 });
