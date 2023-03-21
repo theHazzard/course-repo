@@ -19,4 +19,13 @@ describe("fizzbuzz", () => {
     expect(fizzBuzz(5)).toBe("Buzz");
     expect(fizzBuzz(10)).toBe("Buzz");
   });
+
+  it("returns FizzBuzz on multiples of both 5 and 3", () => {
+    expect(fizzBuzz(15)).toBe("FizzBuzz");
+    expect(fizzBuzz(30)).toBe("FizzBuzz");
+  });
+
+  it("rejects numbers lower than 1", () => {
+    expect(() => fizzBuzz(-1)).toThrow();
+  });
 });
