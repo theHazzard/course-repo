@@ -3,14 +3,18 @@ export function fizzBuzz(number: number) {
     throw Error("number should be on the range of 1...100");
   }
 
-  if (number % 3 === 0 && number % 5 === 0) {
+  const isMultipleOf3 = number % 3 === 0;
+  const isMultipleOf5 = number % 5 === 0;
+
+  if (isMultipleOf3 && isMultipleOf5) {
     return "FizzBuzz";
   }
-  if (number % 5 === 0) {
+  if (isMultipleOf5) {
     return "Buzz";
   }
-  if (number % 3 === 0) {
+  if (isMultipleOf3) {
     return "Fizz";
   }
+
   return number.toString();
 }
